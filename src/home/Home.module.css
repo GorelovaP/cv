@@ -1,0 +1,30 @@
+.home{
+    background: #89bee3;
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    width: 100%;
+    height: 80%;
+    margin-top: 10%;
+    border: darkslateblue 1px solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.text{
+    background: #dedcdc;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+h1 {
+    margin: 0;
+    color: #ffb400;;
+}
+
+.image{
+    background: #000;
+    width: 35%;
+    height: 100%;
+}
