@@ -1,0 +1,22 @@
+.skills {
+    background: #5d5d9e;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.skillsBox{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    border: black 1px solid;
+    justify-content: space-evenly ;
+    justify-items: center;
+}
