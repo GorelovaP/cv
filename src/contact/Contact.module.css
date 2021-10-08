@@ -1,0 +1,22 @@
+.contact{
+    background: #e07b4b;
+    width: 100%;
+    min-height: calc(100vh - 180px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.h2{
+     background: #e4a9f5;
+ }
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

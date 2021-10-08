@@ -1,0 +1,44 @@
+.button{
+    overflow: hidden;
+    position: relative;
+    border-radius: 35px;
+    padding: 16px 70px 16px 35px;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #ffb400;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+
+}
+.button:before{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: .3s ease-out all;
+    background: #ffb400;
+}
+.buttonIcon{
+    position: absolute;
+    display: inline-block;
+top: 0;
+    right: -1px;
+    height:100%;
+    width: 50px;
+    border-radius: 50%;
+    background: #ffb400;
+    z-index: 3;
+}
+.button:hover:before {
+    transform: translateX(0);
+}
+
+.button:hover{
+
+}

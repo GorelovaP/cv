@@ -8,7 +8,6 @@ export const NavBlock = ()=>
             <a href="#">Home</a>
             <a href="#">Skills</a>
             <a href="#">Portfolio</a>
-            <a href="#">Work</a>
             <a href="#">Contact</a>
         </div>
     );

@@ -1,5 +1,5 @@
-.skills {
-    background: #5d5d9e;
+.portfolio {
+    background: #9e5d72;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -12,6 +12,6 @@
     justify-content: flex-start;
     align-items: center;
 }
-h2{
+.h2{
     background: #e4a9f5;
 }
