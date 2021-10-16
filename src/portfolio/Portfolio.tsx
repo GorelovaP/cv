@@ -11,9 +11,9 @@ export const Portfolio = () => {
                 <h2 className={s.h2}>Portfolio</h2>
                 <div className={sComm.Box}>
 
-                    <Project name={"Project 1"}
+                    <Project name={"Block 1"}
                              description={" description loren  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cum dignissimos distinctio incidunt laborum modi nesciunt,"}/>
-                    <Project name={"Project 2"}
+                    <Project name={"Block 2"}
                              description={"description quasi reiciendis temporibus unde veritatis voluptates? Ab cumque delectus officia, porro quod voluptatum."}/>
                 </div>
             </div>
