@@ -17,7 +17,6 @@
      background: #e4a9f5;
  }
 .form{
-    box-sizing: border-box;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -27,10 +26,12 @@
     margin-bottom: 20px;
 }
 .textarea{
+    box-sizing: border-box;
     width: 100%;
     resize: none;
 }
 input{
+    box-sizing: border-box;
     width: 100%;
     margin-bottom: 10px;
 }
