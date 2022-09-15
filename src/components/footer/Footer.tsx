@@ -1,6 +1,6 @@
 import React from 'react';
 import s from "./Footer.module.css"
-import sComm from "../common/style/Wrapper.module.css"
+import sComm from "../../common/style/Wrapper.module.css"
 import {Block} from "./blok/Block";
 
 export const Footer = () => {

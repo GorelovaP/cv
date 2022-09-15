@@ -1,6 +1,7 @@
 import React from 'react';
 import s from "./Project.module.css"
-import {Button} from "../../common/button/Button";
+import {Button} from "../../../common/button/Button";
+
 type ProjectPropsType={
     name: string;
     description: string;

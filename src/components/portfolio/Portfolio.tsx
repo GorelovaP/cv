@@ -1,7 +1,7 @@
 import React from 'react';
 import s from "./Portfolio.module.css"
-import sComm from "../common/style/Wrapper.module.css"
-import {Project} from "./ project/Project";
+import sComm from "../../common/style/Wrapper.module.css"
+import {Project} from "./project/Project";
 
 
 export const Portfolio = () => {

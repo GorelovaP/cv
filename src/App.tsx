@@ -1,24 +1,20 @@
 import React from 'react';
 
 import './App.css';
-import {Header} from "./header/Header";
-import {Home} from "./home/Home";
-import {Skills} from "./skills/Skills";
-import {Portfolio} from "./portfolio/Portfolio";
-import {Contact} from "./contact/Contact";
-import {Footer} from "./footer/Footer";
+import {Header} from "./components/header/Header";
+
+import Pages from "./common/pages/Pages";
+import {HashRouter} from 'react-router-dom';
 
 function App() {
-  return (
-    <div className="App">
-      <Header/>
-        <Home />
-        <Skills/>
-      <Portfolio/>
-        <Contact/>
-        <Footer/>
-    </div>
-  );
+    return (
+        <div className="App">
+            <HashRouter>
+                <Header/>
+                <Pages/>
+            </HashRouter>
+        </div>
+    );
 }
 
 export default App;

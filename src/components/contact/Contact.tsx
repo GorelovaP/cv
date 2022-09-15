@@ -1,7 +1,7 @@
 import React from 'react';
 import s from "./Contact.module.css"
-import sComm from "../common/style/Wrapper.module.css"
-import {Button} from "../common/button/Button";
+import sComm from "../../common/style/Wrapper.module.css"
+import {Button} from "../../common/button/Button";
 
 export const Contact = () => {
     return (
@@ -11,9 +11,9 @@ export const Contact = () => {
                 <form action="#" className={s.form}>
                     <input type="text"/>
                     <input type="text"/>
-                    <textarea name="fild"  className={s.textarea}> </textarea>
+                    <textarea name="fild" className={s.textarea}> </textarea>
                 </form>
-                <Button text={"Отправить"}/>
+                <Button type={"submit"} text={"Отправить"}/>
             </div>
         </div>
     );

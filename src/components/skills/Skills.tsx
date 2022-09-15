@@ -1,6 +1,6 @@
 import React from 'react';
 import s from "./Skills.module.css"
-import sComm from "../common/style/Wrapper.module.css"
+import sComm from "../../common/style/Wrapper.module.css"
 
 import {Skill} from "./skill/Skill";
 
