@@ -6,19 +6,22 @@ import s from "./Header.module.css"
 
 export const Header = () => {
     const match = useMatch('/:routeKey');
+    console.log(match?.params.routeKey)
     return (
         <div className={s.header}>
             <div className={s.navBlock}>
                 <NavLink
-                    className={`${s.navBlock__item} ${match?.params.routeKey === "/home" ? s.active : undefined}`}
-                    to={"/home"}> Home </NavLink>
+                    className={`${s.navBlock__item} ${match?.params.routeKey === "home" ? s.navBlock__item_active : ""}`}
+                    to={PATH.HOME}> Home </NavLink>
                 <NavLink
-                    className={`${s.navBlock__item} ${match?.params.routeKey === PATH.SKILLS ? s.active : undefined}`}
+                    className={`${s.navBlock__item} ${match?.params.routeKey ===  "skills" ? s.navBlock__item_active : ""}`}
                     to={PATH.SKILLS}> Skills </NavLink>
-                <NavLink className={`${s.navBlock__item} ${match?.params.routeKey === PATH.PORTFOLIO ? s.active : ''}`}
-                         to={PATH.PORTFOLIO}> Portfolio </NavLink>
-                <NavLink className={`${s.navBlock__item} ${match?.params.routeKey === PATH.CONTACTS ? s.active : ''}`}
-                         to={PATH.CONTACTS}> Contact </NavLink>
+                <NavLink
+                    className={`${s.navBlock__item} ${match?.params.routeKey === "portfolio" ? s.navBlock__item_active : ''}`}
+                    to={PATH.PORTFOLIO}> Portfolio </NavLink>
+                <NavLink
+                    className={`${s.navBlock__item} ${match?.params.routeKey === "contacts" ? s.navBlock__item_active : ''}`}
+                    to={PATH.CONTACTS}> Contact </NavLink>
             </div>
         </div>
     );

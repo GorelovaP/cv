@@ -1,11 +1,9 @@
 .contact{
-    background: #e07b4b;
+    background: #111;
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 .wrapper{
     display: flex;
