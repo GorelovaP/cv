@@ -1,18 +1,16 @@
 import React from 'react';
 import s from "./Skill.module.css"
 
-type SkillPropsType=
+type SkillPropsType =
     {
         title: string;
-    text: string;
-}
+        percent: string;
+    }
 export const Skill = (props: SkillPropsType) => {
     return (
         <div className={s.skill}>
-            <div  className={s.icon}> </div>
+            <div className={s.icon}> <span className={s.percent}>{props.percent}</span></div>
             <h3 className={s.title}>{props.title} </h3>
-            <div className={s.image}> </div>
-            <span className={s.text}>{props.text}</span>
         </div>
     );
 }

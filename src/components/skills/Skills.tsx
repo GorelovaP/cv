@@ -26,6 +26,7 @@ export const Skills = () => {
                                     className={s.item__value}>{value}</span></li>)
                             }
                         </ul>
+                        <Button text={"Download CV"} image={download}/>
                     </div>
                     <div className={s.PersonalBlock__facts}>
                         {facts.map((el, index) => {
@@ -38,14 +39,30 @@ export const Skills = () => {
                         })}
                     </div>
                 </div>
-                <Button text={"Download CV"} image={download}/>
+                <hr className={s.separator}/>
+
+                <h3 className={s.commonH3}>My skills</h3>
                 <div className={sComm.Box}>
                     <Skill title={"JS"}
-                           text={"Lorem ipsum dolor sit amet,ex excepturi fugit in, repellendus reprehenderit rerum voluptate voluptates voluptatum."}/>
-                    <Skill title={"CCS"}
-                           text={"consectetur adipisicing elit. Accusamus accusantium corporis doloribus "}/>
-                    <Skill title={"HTML"} text={"iste laborum nemo nobis non perspiciatis quisquam quos"}/>
+                           percent={"75%"}/>
+                    <Skill title={"JS"}
+                           percent={"75%"}/>
+                    <Skill title={"JS"}
+                           percent={"75%"}/>
+                    <Skill title={"JS"}
+                           percent={"75%"}/>
+                    <Skill title={"JS"}
+                           percent={"75%"}/>
+                    <Skill title={"JS"}
+                           percent={"75%"}/>
+                    <Skill title={"JS"}
+                           percent={"75%"}/>
+                    <Skill title={"JS"}
+                           percent={"75%"}/>
+
                 </div>
+                <hr className={s.separator}/>
+                <h3 className={s.commonH3}>Education</h3>
             </div>
         </div>
     );
