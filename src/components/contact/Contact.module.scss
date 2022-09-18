@@ -1,0 +1,64 @@
+@import "../../common/style/variables";
+@import "../../common/style/mixins";
+
+.contact {
+  background: $bgColor;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .bodyWrapper {
+    @include bodyWrapper();
+
+    .content {
+      display: flex;
+
+      .blockInfo {
+        width: 35%;
+
+        .titleH3 {
+          @include text($mainFontFamily, 600, 26px, $textMainColor);
+          @include titleH3(16px);
+        }
+      }
+
+      .blockForm {
+        width: 65%;
+
+        .form {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-between;
+          border: 1px solid black;
+          margin-bottom: 20px;
+
+          input {
+            box-sizing: border-box;
+            width: 100%;
+            margin-bottom: 10px;
+          }
+
+          .textarea {
+            box-sizing: border-box;
+            width: 100%;
+            resize: none;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
