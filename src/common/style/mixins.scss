@@ -1,5 +1,13 @@
 @import "variables";
 
+
+@mixin startScreen (){
+  background: $bgColor;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+}
+
 @mixin bodyWrapper() {
   width: 100%;
   max-width: 1100px;
@@ -11,6 +19,7 @@
     max-width: calc(100% - 195px)
   }
 }
+
 
 @mixin text($fontFamily,$fontWeight,$fontSize, $textColor) {
   font-family: $fontFamily;

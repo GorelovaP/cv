@@ -1,5 +1,5 @@
 import React from 'react';
-import s from "./Home.module.css"
+import s from "./Home.module.scss"
 import {Button} from "../../common/button/Button";
 import arrow from "./../../sources/images/ArroyRight.png"
 import {NavLink} from "react-router-dom";
