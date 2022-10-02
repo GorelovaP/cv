@@ -1,0 +1,28 @@
+@import "../../common/style/variables";
+
+.blockContainer {
+  padding: 0 20px 0px 60px;
+  margin-bottom: 50px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    bottom: 0;
+    border-left: 1px solid #333;
+  }
+
+  .imageBlock {
+    position: absolute;
+
+    .image {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: $mainBrightColor;
+    }
+  }
+
+
+}
