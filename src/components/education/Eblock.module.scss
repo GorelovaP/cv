@@ -1,7 +1,9 @@
 @import "../../common/style/variables";
+@import "../../common/style/mixins";
 
 .blockContainer {
-  padding: 0 20px 0px 60px;
+  position: relative;
+  padding: 0 20px 0 60px;
   margin-bottom: 50px;
 
   &::after {
@@ -11,18 +13,70 @@
     left: 20px;
     bottom: 0;
     border-left: 1px solid #333;
+    z-index: 1;
   }
+
 
   .imageBlock {
     position: absolute;
+    left: 0;
 
     .image {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 40px;
       height: 40px;
       border-radius: 50%;
       background-color: $mainBrightColor;
+      z-index: 2;
     }
   }
 
+  .informationBlock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+
+    .years {
+      @include text($supportFontFamily, 600, 12px, $textMainColor);
+
+      position: relative;
+      margin-bottom: 10px;
+      display: inline-block;
+      vertical-align: top;
+      text-transform: uppercase;
+      opacity: 0.8;
+
+      span {
+        background: #252525;
+        padding: 0 10px;
+        border-radius: 20px;
+      }
+    }
+
+    .h5 {
+      @include text($mainFontFamily, 500, 18px, $textMainColor);
+      margin: 7px 0 10px;
+      text-transform: uppercase;
+
+      span {
+        @include text($supportFontFamily, 500, 18px, $supportColor);
+        position: relative;
+        text-align: center;
+
+        &::before {
+          content: " — ";
+        }
+      }
+    }
+
+    .description {
+      @include text($supportFontFamily, 500, 14px, #eee);
+    }
+  }
 
 }

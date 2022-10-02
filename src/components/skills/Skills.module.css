@@ -134,8 +134,12 @@
     color: white;
 }
 
-.educationContainer, .educationContainer {
-    background: #9e5d72;
+.experienceAndEducationBlock {
+    display: flex;
+    flex-direction: row;
+}
+
+.educationContainer, .experienceContainer {
     display: flex;
     flex-direction: column;
     flex: 0 0 50%;

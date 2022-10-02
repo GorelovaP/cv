@@ -65,18 +65,23 @@ export const Skills = () => {
                 </div>
                 <hr className={s.separator}/>
                 <h3 className={s.commonH3}> experience & education </h3>
-                <div className={s.experienceContainer}>
-                    <EBlock image={workIcon} years={"2022-present"} title={"WEB DEVELOPER"} addition={"addition"}
-                            description={"Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,"}/>
-                </div>
-                <div className={s.educationContainer}>
-                    <EBlock image={educationIcon} years={"2022-present"} title={"WEB DEVELOPER"} addition={"addition"}
-                            description={"Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,"}/>
-                    <EBlock image={educationIcon} years={"2022-present"} title={"WEB DEVELOPER"} addition={"addition"}
-                            description={"Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,"}/>
-                </div>
+                <div className={s.experienceAndEducationBlock}>
+                    <div className={s.experienceContainer}>
+                        <EBlock image={workIcon} years={"2022 - present"} title={"WEB DEVELOPER"} addition={"addition"}
+                                description={"Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,"}/>
+                    </div>
+                    <div className={s.educationContainer}>
+                        <EBlock image={educationIcon} years={"2022 - present"} title={"WEB DEVELOPER"}
+                                addition={"addition"}
+                                description={"Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,"}/>
+                        <EBlock image={educationIcon} years={"2022 - present"} title={"WEB DEVELOPER"}
+                                addition={"addition"}
+                                description={"Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,"}/>
+                    </div>
 
+                </div>
             </div>
+
         </div>
     );
 }
