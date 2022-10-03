@@ -1,0 +1,20 @@
+@import "../../../common/style/variables";
+@import "../../../common/style/mixins";
+
+.item {
+  height: 40px;
+  width: 40px;
+  line-height: 42px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #2b2a2a;
+  margin-right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .image {
+    width: 20px;
+    height: 20px;
+  }
+}

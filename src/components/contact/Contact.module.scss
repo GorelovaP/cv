@@ -16,10 +16,22 @@
 
       .blockInfo {
         width: 35%;
+        padding-right: 20px;
 
         .titleH3 {
           @include text($mainFontFamily, 600, 26px, $textMainColor);
           @include titleH3(16px);
+        }
+
+        .info {
+          @include text($supportFontFamily, 500, 15px, $textMainColor);
+          margin-bottom: 1rem;
+          line-height: 1.6;
+        }
+
+        .SocialContainer {
+          display: flex;
+          flex-direction: row;
         }
       }
 
@@ -27,24 +39,24 @@
         width: 65%;
 
         .form {
-          width: 50%;
+          width: 100%;
           display: flex;
-          flex-direction: column;
-          align-items: flex-start;
+          flex-direction: row;
           justify-content: space-between;
-          border: 1px solid black;
+          flex-wrap: wrap;
           margin-bottom: 20px;
 
-          input {
-            box-sizing: border-box;
-            width: 100%;
-            margin-bottom: 10px;
+          .input {
+            max-width: 33%;
+            padding: 15px 20px;
           }
 
-          .textarea {
+          .textArea {
             box-sizing: border-box;
             width: 100%;
-            resize: none;
+            resize: vertical;
+            min-height: 180px;
+            margin-bottom: 0;
           }
         }
       }

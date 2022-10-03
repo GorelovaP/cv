@@ -7,13 +7,17 @@ import workIcon from "../../sources/images/workIcon.png"
 
 import {Skill} from "./skill/Skill";
 import {Title} from "../../common/title/Title";
-import {Store} from "../../redux/store";
+
 import {Button} from "../../common/button/Button";
 import {EBlock} from "../education/EBlock";
+import {useSelector} from "react-redux";
+import {AppRootStateType} from "../../redux/store";
+import {factsType, infoItemsType} from "../../redux/AppReduser";
 
 export const Skills = () => {
-    let infoItems = Store.skills.personalBlock.infoItems
-    let facts = Store.skills.personalBlock.facts
+    let infoItems = useSelector<AppRootStateType, infoItemsType>(state => state.app.skills.personalBlock.infoItems)
+    let facts = useSelector<AppRootStateType, factsType[]>(state => state.app.skills.personalBlock.facts)
+
     return (
         <div className={s.skills}>
             <Title bgTitle={"Resume"} mainTitle={"About "} spanText={"me"}/>

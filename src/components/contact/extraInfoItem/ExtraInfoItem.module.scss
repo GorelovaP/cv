@@ -1,0 +1,26 @@
+@import "../../../common/style/variables";
+@import "../../../common/style/mixins";
+
+.item {
+  @include text($supportFontFamily, 600, 16px, $textMainColor);
+  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  .image {
+    margin-right: 20px;
+  }
+
+  .text {
+    margin: 0;
+  }
+
+  .title {
+    display: block;
+    text-transform: uppercase;
+    opacity: 0.8;
+    font-weight: 400;
+  }
+}

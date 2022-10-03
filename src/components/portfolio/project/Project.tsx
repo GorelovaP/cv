@@ -1,21 +1,29 @@
 import React from 'react';
-import s from "./Project.module.css"
-import {Button} from "../../../common/button/Button";
+import s from "./Project.module.scss"
 
-type ProjectPropsType={
+
+
+type ProjectPropsType = {
+    onClick: () => void;
     name: string;
     description: string;
+    image: string
+    technology: string;
+    link: string;
 }
 
 export const Project = (props: ProjectPropsType) => {
-    return (
-        <div className={s.project}>
-            <div className={s.image}>
-                <Button text={"посмотреть"}/>
+
+
+    return (<>
+            <div className={s.project} style={{
+                backgroundImage: `url(${props.image})`
+            }}
+                 onClick={props.onClick}>
+
             </div>
-            <h3 className={s.name}>{props.name}</h3>
-            <span className={s.description}>{props.description} </span>
-        </div>
+        </>
+
     );
 }
 
