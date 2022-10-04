@@ -12,7 +12,6 @@ export const Home = () => {
             <div className={s.home_color}>
 
             </div>
-            {/*<div className={`${sComm.wrapper} ${s.wrapper}`}>*/}
             <div className={s.wrapper}>
                 <div className={s.image}> </div>
                 <div className={s.text}>

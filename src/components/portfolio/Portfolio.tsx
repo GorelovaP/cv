@@ -3,7 +3,6 @@ import s from "./Portfolio.module.scss"
 
 import {Project} from "./project/Project";
 import {Title} from "../../common/title/Title";
-import project from "../../sources/images/project.png"
 import {useDispatch, useSelector} from "react-redux";
 import {ModalStatusAC, portfolioType} from "../../redux/AppReduser";
 import {AppRootStateType} from "../../redux/store";
@@ -29,7 +28,7 @@ export const Portfolio = () => {
                     <Project onClick={OpenOnClickHandler}
                              key={index}
                              name={el.name} description={el.description}
-                             image={project} technology={el.technology} link={el.link}/>
+                             image={el.image} technology={el.technology} link={el.link}/>
                 )}
             </div>
         </div>

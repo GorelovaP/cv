@@ -1,3 +1,5 @@
+import project from "../sources/images/project.png"
+
 export type ActionsAppType = ReturnType<typeof ModalStatusAC>
 export const InitialState: StateType = {
     portfolios: {
@@ -5,41 +7,41 @@ export const InitialState: StateType = {
             {
                 name: "TODO1",
                 description: "description loren  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cum dignissimos distinctio incidunt laborum modi nesciunt",
-                image: "project.png",
+                image: project,
                 technology: "dfgfdsasdfddddddddddddddddddddddddddddddddddddddddddddddddddghgfds",
                 link: "dfgxcvbnjmkljhgfdshj"
             },
             {
                 name: "hjkl2",
                 description: "description loren  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cum dignissimos distinctio incidunt laborum modi nesciunt",
-                image: "project.png",
+                image: project,
                 technology: "dfgfdsasdfddddddddddddddddddddddddddddddddddddddddddddddddddghgfds",
                 link: "dfgxcvbnjmkljhgfdshj"
             },
             {
                 name: "hjkl3",
                 description: "description loren  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cum dignissimos distinctio incidunt laborum modi nesciunt",
-                image: "project.png",
+                image: project,
                 technology: "dfgfdsasdfddddddddddddddddddddddddddddddddddddddddddddddddddghgfds",
                 link: "dfgxcvbnjmkljhgfdshj"
             },
             {
                 name: "hjkl4",
                 description: "description loren  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cum dignissimos distinctio incidunt laborum modi nesciunt",
-                image: "project.png",
+                image: project,
                 technology: "dfgfdsasdfddddddddddddddddddddddddddddddddddddddddddddddddddghgfds",
                 link: "dfgxcvbnjmkljhgfdshj"
             }, {
                 name: "hjkl5",
                 description: "description loren  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cum dignissimos distinctio incidunt laborum modi nesciunt",
-                image: "project.png",
+                image: project,
                 technology: "dfgfdsasdfddddddddddddddddddddddddddddddddddddddddddddddddddghgfds",
                 link: "dfgxcvbnjmkljhgfdshj"
             },
             {
                 name: "hjkl6",
                 description: "description loren  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cum dignissimos distinctio incidunt laborum modi nesciunt",
-                image: "project.png",
+                image: project,
                 technology: "dfgfdsasdfddddddddddddddddddddddddddddddddddddddddddddddddddghgfds",
                 link: "dfgxcvbnjmkljhgfdshj"
             }],
