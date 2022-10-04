@@ -36,6 +36,7 @@
 
     .image {
       @include MainImage();
+      z-index: 4;
 
     }
 

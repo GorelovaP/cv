@@ -4,11 +4,12 @@ type TitlePropsType = {
     mainTitle: string;
     bgTitle: string;
     spanText: string;
+    extraClass?: string;
 }
 export const Title = (props: TitlePropsType) => {
     return (
         <div className={s.titleSpace}>
-            <div className={s.titleSpace__bgTitle}>
+            <div className={`${s.titleSpace__bgTitle} ${props.extraClass}`}>
                 {props.bgTitle}
             </div>
             <div>

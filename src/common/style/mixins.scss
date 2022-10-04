@@ -24,7 +24,9 @@
   @media (max-width: 768px) {
     max-width: 544px;
   }
-  @media (max-width: 576px) { //мобилка
+  @media (max-width: 576px) {
+    box-sizing: border-box;
+    //мобилка
     max-width: 100%;
     padding: 0 25px;
     background: #111;

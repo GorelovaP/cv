@@ -16,7 +16,7 @@ import {TextArea} from "../../common/textArea/TextArea";
 export const Contact = () => {
     return (
         <div className={s.contact}>
-            <Title bgTitle={"contact"} mainTitle={"Get in "} spanText={"touch"}/>
+            <Title bgTitle={"contact"} mainTitle={"Get in "} spanText={"touch"} extraClass={s.contactTitle}/>
             <div className={s.bodyWrapper}>
                 <div className={s.content}>
                     <div className={s.blockInfo}>
@@ -44,7 +44,10 @@ export const Contact = () => {
 
                             <TextArea className={s.textArea} placeholder={"Your message"}/>
                         </form>
-                        <Button type={"submit"} text={"Отправить"} image={arrow}/>
+                        <Button type={"submit"} text={"Send message"} image={arrow}/>
+                        <div className={s.outPutMessage}>
+
+                        </div>
                     </div>
                 </div>
             </div>

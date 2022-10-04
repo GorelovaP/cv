@@ -89,6 +89,7 @@
                 display: inline;
               }
               @media (max-width: 576px) {
+                font-size: 14px;
                 display: block;
               }
             }
@@ -96,6 +97,7 @@
 
           .item__value {
             color: white;
+            word-wrap: break-word;
           }
         }
       }
@@ -118,6 +120,9 @@
       }
       @media (max-width: 768px) {
         width: 100%;
+      }
+      @media (max-width: 576px) {
+        font-size: 14px;
       }
 
 

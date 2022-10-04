@@ -55,11 +55,12 @@ export const InitialState: StateType = {
                 Age: "22",
                 Nationality: "Belarusian",
                 Freelance: "Available",
+                Relocate: "Available - Poland",
                 Address: "Minsk",
                 Phone: "+37529664768",
                 Email: "Gorelic2000p@gmail.com",
                 LinkedIn: "Gorelova Polina",
-                Languages: "English, Russian"
+                Languages: "English - B1, Russian"
             },
             facts: [
                 ["YEARS OF EXPERIENCE", "21"],
@@ -114,6 +115,7 @@ export type infoItemsType = {
     Age: string,
     Nationality: string,
     Freelance: string,
+    Relocate: string,
     Address: string,
     Phone: string,
     Email: string,

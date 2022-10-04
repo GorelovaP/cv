@@ -1,0 +1,102 @@
+@import "./src/common/style/mixins";
+@import "./src/common/style/variables";
+
+.header {
+  position: fixed;
+  right: 30px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 100vh;
+  @media (max-width: 991px) {
+
+    &_active {
+      background-color: #252525;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      margin: 10px;
+      top: -10px;
+      right: -10px;
+      padding-top: 60px;
+      align-items: start;
+      justify-content: start;
+
+    }
+  }
+
+  .burger {
+    display: none;
+    @media (max-width: 991px) {
+      display: flex;
+    }
+    @media (max-width: 576px) {
+      top: 5px;
+    }
+  }
+
+  .navBlock {
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: 991px) {
+
+      width: 100%;
+      align-items: start;
+    }
+
+    .navBlock__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: #2b2a2a;
+      margin: 15px 0;
+      text-decoration: none;
+
+      &_active {
+        color: white;
+        background-color: $mainBrightColor;
+      }
+
+      @media (max-width: 991px) {
+        @include text($mainFontFamily, 400, 26px, $textMainColor);
+        display: none;
+        z-index: 100000;
+        background: #000;
+        &_activeB {
+          color: white;
+          display: inherit;
+          width: 100%;
+          background: none;
+          justify-content: start;
+          border-radius: 0;
+          border-bottom: 1px solid #333333;
+          padding-left: 30px;
+        }
+        &_active {
+          color: $mainBrightColor;
+        }
+
+      }
+
+      .item__image {
+
+        @media (max-width: 991px) {
+          height: 20px;
+          margin-right: 15px;
+        }
+      }
+
+    }
+
+
+  }
+}
+
+
+
