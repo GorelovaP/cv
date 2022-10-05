@@ -1,5 +1,5 @@
 import React from 'react';
-import s from "./Button.module.css"
+import s from "./Button.module.scss"
 
 
 type ButtonPropsType = {
@@ -12,7 +12,7 @@ export const Button = (props: ButtonPropsType) => {
         <div>
             <a href="#">
                 <button type={props.type} className={s.button}>{props.text}
-                    <div className={s.buttonIcon}><img className={s.buttonIcon__image} src={props.image} alt="image"/></div>
+                    <div className={s.button__icon}><img className={s.button__icon__image} src={props.image} alt="image"/></div>
                 </button>
             </a>
 
