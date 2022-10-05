@@ -27,12 +27,15 @@ export const Contact = () => {
                         </div>
                         <div>
                             <ExtraInfoItem image={MailMe} description={"Gorelic2000p@gmail.com"} title={"Mail me"}/>
-                            <ExtraInfoItem image={PhoneMe} description={"+375 29 6647668"} title={"Call me"}/>
+                           <ExtraInfoItem image={PhoneMe}
+                                                                                                description={"+375 29 6647668"}
+                                                                                                title={"Call me"}/>
                         </div>
                         <div className={s.SocialContainer}>
-                            <SocialItem image={linked}/>
-                            <SocialItem image={git}/>
-                            <SocialItem image={telegram}/>
+                            <a href="https://www.linkedin.com/in/polin%D0%B0-gorelova">
+                                <SocialItem image={linked}/></a>
+                            <a href="https://github.com/GorelovaP"> <SocialItem image={git}/></a>
+                            <a href="https://t.me/+375296647668"> <SocialItem image={telegram}/></a>
                         </div>
 
                     </div>

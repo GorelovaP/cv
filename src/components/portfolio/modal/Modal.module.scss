@@ -1,0 +1,130 @@
+@import "./src/common/style/mixins";
+@import "./src/common/style/variables";
+
+
+.modalBg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  .close {
+    position: fixed;
+    height: 55px;
+    width: 55px;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    opacity: 0.7;
+    @media (max-width: 768px) {
+      z-index: 1;
+      width: 100%;
+      right: 0;
+      top: 0;
+      height: 70px;
+      border-bottom: 1px solid #333333;;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:before, &:after {
+      position: absolute;
+      left: 27px;
+      content: ' ';
+      height: 33px;
+      width: 4px;
+      margin: 0 auto;
+      background-color: $textMainColor;
+      border-radius: 2px;
+      @media (max-width: 768px) {
+        right: 27px;
+
+      }
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .modal {
+    @include text($supportFontFamily, 400, 15px, $textMainColor);
+    width: 660px;
+    position: absolute;
+    border-radius: 10px;
+    padding: 30px;
+    background: #252525;
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 90%;
+      padding: 50px;
+    }
+
+    &__h3 {
+      @include titleH3(20px);
+      @include text($mainFontFamily, 700, 33px, $mainBrightColor);
+      text-align: center;
+      @media (max-width: 768px) {
+        box-sizing: border-box;
+        margin-top: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+
+    &__textBlock {
+      @media (max-width: 768px) {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+      &__description {
+        margin-bottom: 10px;
+
+        &_bold {
+          font-weight: 600;
+          margin-left: 5px;
+        }
+      }
+
+      &__link {
+        &_yellow {
+          color: $mainBrightColor;
+        }
+
+        &_bold {
+          font-weight: 600;
+          margin-left: 5px;
+        }
+      }
+    }
+
+    &__image {
+      margin-top: 15px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      @media (max-width: 768px) {
+        box-sizing: border-box;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 10px;
+      }
+    }
+  }
+
+}

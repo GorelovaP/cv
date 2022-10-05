@@ -8,9 +8,15 @@
   flex-direction: row;
   align-items: center;
   margin-bottom: 1rem;
+  text-decoration: none;
 
   .image {
     margin-right: 20px;
+  }
+
+  .link {
+    text-decoration: none;
+    color: white;
   }
 
   .text {

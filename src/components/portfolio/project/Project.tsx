@@ -2,7 +2,6 @@ import React from 'react';
 import s from "./Project.module.scss"
 
 
-
 type ProjectPropsType = {
     onClick: () => void;
     name: string;

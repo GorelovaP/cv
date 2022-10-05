@@ -10,7 +10,6 @@ export const Home = () => {
     return (
         <div className={s.home}>
             <div className={s.home_color}>
-
             </div>
             <div className={s.wrapper}>
                 <div className={s.image}> </div>

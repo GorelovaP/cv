@@ -1,6 +1,6 @@
 import project from "../sources/images/project.png"
 
-export type ActionsAppType = ReturnType<typeof ModalStatusAC>
+export type ActionsAppType = ReturnType<typeof ModalStatusAC> | ReturnType<typeof SetModalInformationAC>
 export const InitialState: StateType = {
     portfolios: {
         all: [
@@ -12,40 +12,47 @@ export const InitialState: StateType = {
                 link: "dfgxcvbnjmkljhgfdshj"
             },
             {
-                name: "hjkl2",
+                name: "hjkl222",
                 description: "description loren  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cum dignissimos distinctio incidunt laborum modi nesciunt",
                 image: project,
                 technology: "dfgfdsasdfddddddddddddddddddddddddddddddddddddddddddddddddddghgfds",
                 link: "dfgxcvbnjmkljhgfdshj"
             },
             {
-                name: "hjkl3",
+                name: "hjkl333",
                 description: "description loren  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cum dignissimos distinctio incidunt laborum modi nesciunt",
                 image: project,
                 technology: "dfgfdsasdfddddddddddddddddddddddddddddddddddddddddddddddddddghgfds",
                 link: "dfgxcvbnjmkljhgfdshj"
             },
             {
-                name: "hjkl4",
+                name: "hjkl444",
                 description: "description loren  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cum dignissimos distinctio incidunt laborum modi nesciunt",
                 image: project,
                 technology: "dfgfdsasdfddddddddddddddddddddddddddddddddddddddddddddddddddghgfds",
                 link: "dfgxcvbnjmkljhgfdshj"
             }, {
-                name: "hjkl5",
+                name: "hjkl555",
                 description: "description loren  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cum dignissimos distinctio incidunt laborum modi nesciunt",
                 image: project,
                 technology: "dfgfdsasdfddddddddddddddddddddddddddddddddddddddddddddddddddghgfds",
                 link: "dfgxcvbnjmkljhgfdshj"
             },
             {
-                name: "hjkl6",
+                name: "hjkl666",
                 description: "description loren  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cum dignissimos distinctio incidunt laborum modi nesciunt",
                 image: project,
                 technology: "dfgfdsasdfddddddddddddddddddddddddddddddddddddddddddddddddddghgfds",
                 link: "dfgxcvbnjmkljhgfdshj"
             }],
-        modalStatus: false
+        modalStatus: false,
+        modal: {
+            name: "",
+            description: "",
+            image: "",
+            technology: "",
+            link: ""
+        }
     },
     skills: {
         personalBlock: {
@@ -77,6 +84,8 @@ export const AppReducer = (state: StateType = InitialState, action: ActionsAppTy
     switch (action.type) {
         case 'PORTFOLIO/CHANGE-MODAL-STATUS':
             return {...state, portfolios: {...state.portfolios, modalStatus: action.status}}
+        case 'PORTFOLIO/SET-MODAL-INFO':
+            return {...state, portfolios: {...state.portfolios, modal: {...action.information}}}
         default:
             return state
     }
@@ -92,7 +101,8 @@ type skillsBlockType = {
 }
 type portfoliosBlockType = {
     all: portfolioType[],
-    modalStatus: boolean
+    modalStatus: boolean,
+    modal: portfolioType
 }
 
 
@@ -128,4 +138,8 @@ export type factsType = string[]
 
 export const ModalStatusAC = (status: boolean) => {
     return {type: "PORTFOLIO/CHANGE-MODAL-STATUS", status} as const
+
+}
+export const SetModalInformationAC = (information: portfolioType) => {
+    return {type: "PORTFOLIO/SET-MODAL-INFO", information} as const
 }

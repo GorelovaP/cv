@@ -4,20 +4,23 @@ import s from "./Portfolio.module.scss"
 import {Project} from "./project/Project";
 import {Title} from "../../common/title/Title";
 import {useDispatch, useSelector} from "react-redux";
-import {ModalStatusAC, portfolioType} from "../../redux/AppReduser";
+import {ModalStatusAC, portfolioType, SetModalInformationAC} from "../../redux/AppReduser";
 import {AppRootStateType} from "../../redux/store";
+import {ModalCard} from "./modal/ModalCard";
 
 
 export const Portfolio = () => {
     let dispatch = useDispatch()
     let active = useSelector<AppRootStateType, boolean>(state => state.app.portfolios.modalStatus)
     let portfolios = useSelector<AppRootStateType, portfolioType[]>(state => state.app.portfolios.all)
+    let modal = useSelector<AppRootStateType, portfolioType>(state => state.app.portfolios.modal)
 
-    const OpenOnClickHandler = () => {
+    const OpenOnClickHandler = (portfolio: portfolioType) => {
         dispatch(ModalStatusAC(true))
+        dispatch(SetModalInformationAC(portfolio))
     }
     const CloseOnClickHandler = () => {
-        dispatch(ModalStatusAC(true))
+        dispatch(ModalStatusAC(false))
     }
 
     return (
@@ -25,12 +28,13 @@ export const Portfolio = () => {
             <Title bgTitle={"works"} mainTitle={"My "} spanText={"portfolio"}/>
             <div className={s.bodyWrapper}>
                 {portfolios.map((el, index) =>
-                    <Project onClick={OpenOnClickHandler}
+                    <Project onClick={() => OpenOnClickHandler(el)}
                              key={index}
                              name={el.name} description={el.description}
                              image={el.image} technology={el.technology} link={el.link}/>
                 )}
             </div>
+            {active && <ModalCard data={modal} close={CloseOnClickHandler}/>}
         </div>
     );
 }
