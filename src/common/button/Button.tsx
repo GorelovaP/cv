@@ -10,12 +10,12 @@ type ButtonPropsType = {
 export const Button = (props: ButtonPropsType) => {
     return (
         <div>
-            <a href="#">
-                <button type={props.type} className={s.button}>{props.text}
-                    <div className={s.button__icon}><img className={s.button__icon__image} src={props.image} alt="image"/></div>
-                </button>
-            </a>
-
+            <button type={props.type} className={s.button}>
+                <span>{props.text}</span>
+                <div className={s.button__icon}>
+                    <img className={s.button__icon__image} src={props.image} alt={"buttonImage"}/>
+                </div>
+            </button>
         </div>
     )
 }
