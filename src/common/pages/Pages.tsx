@@ -20,7 +20,7 @@ function Pages() {
     return (
         <div>
             <Routes>
-                {/*в начале мы попадаем на страницу '/' и переходим сразу на страницу PRE_JUNIOR*/}
+                {/*в начале мы попадаем на страницу '/' и переходим сразу на страницу PATH.HOME*/}
                 <Route path={'/'} element={<Navigate to={PATH.HOME}/>}/>
 
                 <Route path={PATH.HOME} element={<Home/>}/>

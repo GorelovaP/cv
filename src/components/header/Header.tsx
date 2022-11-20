@@ -26,6 +26,7 @@ export const Header = () => {
                     className={`${s.navBlock__item} ${match?.params.routeKey === "home" ? s.navBlock__item_active : ""} ${active ? s.navBlock__item_activeB : ""} `}
                     to={PATH.HOME}
                     onClick={() => setActive(false)}>
+                    <div className={s.navBlock__item__text}>Home</div>
                     <img alt="Home" className={s.item__image}
                          src={match?.params.routeKey === "home" && active ? homeActive : home}/>
                     {active ? "Home" : ""}
@@ -36,6 +37,7 @@ export const Header = () => {
                     to={PATH.SKILLS}
                     onClick={() => setActive(false)}
                 >
+                    <div className={s.navBlock__item__text + " " + s.skills}>Skills</div>
                     <img alt="Skills" className={s.item__image}
                          src={match?.params.routeKey === "skills" && active ? meActive : me}/>
                     {active ? "Skills" : ""}
@@ -45,6 +47,7 @@ export const Header = () => {
                     className={`${s.navBlock__item} ${match?.params.routeKey === "portfolio" ? s.navBlock__item_active : ""} ${active ? s.navBlock__item_activeB : ""}`}
                     to={PATH.PORTFOLIO}
                     onClick={() => setActive(false)}>
+                    <div className={s.navBlock__item__text + " " + s.portfolio}>Portfolio</div>
                     <img alt="Portfolio" className={s.item__image}
                          src={match?.params.routeKey === "portfolio" && active ? portfolioActive : portfolio}/>
                     {active ? "Portfolio" : ""}
@@ -54,6 +57,7 @@ export const Header = () => {
                     className={`${s.navBlock__item} ${match?.params.routeKey === "contacts" ? s.navBlock__item_active : ''} ${active ? s.navBlock__item_activeB : ""}`}
                     to={PATH.CONTACTS}
                     onClick={() => setActive(false)}>
+                    <div className={s.navBlock__item__text + " " + s.contacts}>Contacts</div>
                     <img alt="Contacts" className={s.item__image}
                          src={match?.params.routeKey === "contacts" && active ? contactsActive : contacts}/>
                     {active ? "Contacts" : ""} </NavLink>

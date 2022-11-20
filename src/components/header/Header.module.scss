@@ -58,10 +58,41 @@
       margin: 15px 0;
       text-decoration: none;
 
-      &_active {
-        color: white;
+      &__text {
+        color: $textMainColor;
+        position: absolute;
+        opacity: 0;
+      }
+
+      &_active, &:hover {
         background-color: $mainBrightColor;
       }
+
+      &:hover {
+        .navBlock__item__text {
+          @include text($supportFontFamily, 400, 23px, white);
+          transition: 0.5s;
+          opacity: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transform: translate(-50px, 0);
+          background-color: $mainBrightColor;
+          padding: 0 50px 0 20px;
+          height: 50px;
+          border-radius: 40px;
+          z-index: 0;
+        }
+
+        .skills {
+          transform: translate(-40px, 0);
+        }
+
+        .contacts, .portfolio {
+          transform: translate(-60px, 0);
+        }
+      }
+
 
       @media (max-width: 991px) {
         @include text($mainFontFamily, 400, 26px, $textMainColor);
@@ -81,11 +112,19 @@
         &_active {
           color: $mainBrightColor;
         }
+        &:hover {
+          background: transparent;
+
+          .navBlock__item__text {
+            display: none;
+          }
+
+        }
 
       }
 
       .item__image {
-
+        z-index: 2;
         @media (max-width: 991px) {
           height: 20px;
           margin-right: 15px;
