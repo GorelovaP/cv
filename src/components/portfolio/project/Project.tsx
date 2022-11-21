@@ -19,7 +19,6 @@ export const Project = (props: ProjectPropsType) => {
                 backgroundImage: `url(${props.image})`
             }}
                  onClick={props.onClick}>
-
             </div>
         </>
 

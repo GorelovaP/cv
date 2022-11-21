@@ -37,7 +37,7 @@ export const Header = () => {
                     to={PATH.SKILLS}
                     onClick={() => setActive(false)}
                 >
-                    <div className={s.navBlock__item__text + " " + s.skills}>Skills</div>
+                    <div className={s.navBlock__item__text + " " + s.skills}><span>About me</span></div>
                     <img alt="Skills" className={s.item__image}
                          src={match?.params.routeKey === "skills" && active ? meActive : me}/>
                     {active ? "Skills" : ""}

@@ -1,6 +1,7 @@
 @import "../../common/style/variables";
 @import "../../common/style/mixins";
 
+
 .home {
   @include startScreen();
   justify-content: center;

@@ -10,7 +10,9 @@ type propsType = {
 
 export const EBlock = (props: propsType) => {
     return (
+
         <div className={s.blockContainer}>
+
             <div className={s.imageBlock}>
                 <div className={s.image}>
                     <img src={props.image} alt={"icon"}/>
@@ -26,5 +28,6 @@ export const EBlock = (props: propsType) => {
                 </div>
             </div>
         </div>
+
     )
 }

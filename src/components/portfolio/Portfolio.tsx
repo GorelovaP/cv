@@ -7,6 +7,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {ModalStatusAC, portfolioType, SetModalInformationAC} from "../../redux/AppReduser";
 import {AppRootStateType} from "../../redux/store";
 import {ModalCard} from "./modal/ModalCard";
+import {Slide} from 'react-awesome-reveal';
 
 
 export const Portfolio = () => {
@@ -24,17 +25,21 @@ export const Portfolio = () => {
     }
 
     return (
-        <div className={s.portfolio}>
-            <Title bgTitle={"works"} mainTitle={"My "} spanText={"portfolio"}/>
-            <div className={s.bodyWrapper}>
-                {portfolios.map((el, index) =>
-                    <Project onClick={() => OpenOnClickHandler(el)}
-                             key={index}
-                             name={el.name} description={el.description}
-                             image={el.image} technology={el.technology} link={el.link}/>
-                )}
-            </div>
-            {active && <ModalCard data={modal} close={CloseOnClickHandler}/>}
+        <div className={s.supportBg}>
+            <Slide direction="down">
+                <div className={s.portfolio}>
+                    <Title bgTitle={"works"} mainTitle={"My "} spanText={"portfolio"}/>
+                    <div className={s.bodyWrapper}>
+                        {portfolios.map((el, index) =>
+                            <Project onClick={() => OpenOnClickHandler(el)}
+                                     key={index}
+                                     name={el.name} description={el.description}
+                                     image={el.image} technology={el.technology} link={el.link}/>
+                        )}
+                    </div>
+                    {active && <ModalCard data={modal} close={CloseOnClickHandler}/>}
+                </div>
+            </Slide>
         </div>
     );
 }

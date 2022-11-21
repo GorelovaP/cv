@@ -1,6 +1,11 @@
 @import "../../common/style/variables";
 @import "../../common/style/mixins";
 
+
+.supportBg {
+  @include supportBGScreen()
+}
+
 .contact {
   background: $bgColor;
   width: 100%;

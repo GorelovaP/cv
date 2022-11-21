@@ -12,48 +12,56 @@ import arrow from "../../sources/images/ArroyRight.png"
 import {SocialItem} from "./sotialItem/Socialltem";
 import {Input} from "../../common/input/Input";
 import {TextArea} from "../../common/textArea/TextArea";
+import { Slide } from 'react-awesome-reveal';
+
 
 export const Contact = () => {
     return (
-        <div className={s.contact}>
-            <Title bgTitle={"contact"} mainTitle={"Get in "} spanText={"touch"} extraClass={s.contactTitle}/>
-            <div className={s.bodyWrapper}>
-                <div className={s.content}>
-                    <div className={s.blockInfo}>
-                        <h3 className={s.titleH3}>Don't be shy !</h3>
-                        <div className={s.info}>
-                            Feel free to get in touch with me. I am always open to discussing new projects, creative
-                            ideas or opportunities to be part of your visions.
-                        </div>
-                        <div>
-                            <ExtraInfoItem image={MailMe} description={"Gorelic2000p@gmail.com"} title={"Mail me"}/>
-                           <ExtraInfoItem image={PhoneMe}
-                                                                                                description={"+375 29 6647668"}
-                                                                                                title={"Call me"}/>
-                        </div>
-                        <div className={s.SocialContainer}>
-                            <a href="https://www.linkedin.com/in/polin%D0%B0-gorelova">
-                                <SocialItem image={linked}/></a>
-                            <a href="https://github.com/GorelovaP"> <SocialItem image={git}/></a>
-                            <a href="https://t.me/+375296647668"> <SocialItem image={telegram}/></a>
-                        </div>
+        <div className={s.supportBg}>
+            <Slide direction="down">
+                <div className={s.contact}>
+                    <Title bgTitle={"contact"} mainTitle={"Get in "} spanText={"touch"} extraClass={s.contactTitle}/>
+                    <div className={s.bodyWrapper}>
+                        <div className={s.content}>
+                            <div className={s.blockInfo}>
+                                <h3 className={s.titleH3}>Don't be shy !</h3>
+                                <div className={s.info}>
+                                    Feel free to get in touch with me. I am always open to discussing new projects,
+                                    creative
+                                    ideas or opportunities to be part of your visions.
+                                </div>
+                                <div>
+                                    <ExtraInfoItem image={MailMe} description={"Gorelic2000p@gmail.com"}
+                                                   title={"Mail me"}/>
+                                    <ExtraInfoItem image={PhoneMe}
+                                                   description={"+375 29 6647668"}
+                                                   title={"Call me"}/>
+                                </div>
+                                <div className={s.SocialContainer}>
+                                    <a href="https://www.linkedin.com/in/polin%D0%B0-gorelova">
+                                        <SocialItem image={linked}/></a>
+                                    <a href="https://github.com/GorelovaP"> <SocialItem image={git}/></a>
+                                    <a href="https://t.me/+375296647668"> <SocialItem image={telegram}/></a>
+                                </div>
 
-                    </div>
-                    <div className={s.blockForm}>
-                        <form action="#" className={s.form}>
-                            <Input type={"text"} className={s.input} placeholder={"Your name"}/>
-                            <Input type={"email"} className={s.input} placeholder={"Your email"}/>
-                            <Input type={"email"} className={s.input} placeholder={"Your subject"}/>
+                            </div>
+                            <div className={s.blockForm}>
+                                <form action="#" className={s.form}>
+                                    <Input type={"text"} className={s.input} placeholder={"Your name"}/>
+                                    <Input type={"email"} className={s.input} placeholder={"Your email"}/>
+                                    <Input type={"email"} className={s.input} placeholder={"Your subject"}/>
 
-                            <TextArea className={s.textArea} placeholder={"Your message"}/>
-                        </form>
-                        <Button type={"submit"} text={"Send message"} image={arrow}/>
-                        <div className={s.outPutMessage}>
+                                    <TextArea className={s.textArea} placeholder={"Your message"}/>
+                                </form>
+                                <Button type={"submit"} text={"Send message"} image={arrow}/>
+                                <div className={s.outPutMessage}>
 
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </Slide>
         </div>
     );
 }

@@ -1,6 +1,11 @@
 @import "./src/common/style/mixins";
 @import "./src/common/style/variables";
 
+
+.supportBg {
+  @include supportBGScreen()
+}
+
 .portfolio {
   background: #111;
   width: 100%;

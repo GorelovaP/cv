@@ -1,16 +1,20 @@
 import React from 'react';
+import {Fade} from 'react-awesome-reveal';
 import s from "./Skill.module.scss"
 
 type SkillPropsType =
     {
         title: string;
-        percent: string;
+        image: string;
     }
 export const Skill = (props: SkillPropsType) => {
     return (
+
         <div className={s.skill}>
-            <div className={s.icon}> <span className={s.percent}>{props.percent}</span></div>
-            <h3 className={s.title}>{props.title} </h3>
+            <Fade>
+                <div className={s.icon}><img className={s.icon__image} src={props.image} alt={"skill"}/></div>
+                <h3 className={s.title}>{props.title} </h3>
+            </Fade>
         </div>
     );
 }

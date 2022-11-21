@@ -7,6 +7,8 @@ import {PATH} from "../../common/pages/Pages";
 import Particles from 'react-tsparticles';
 import {loadFull} from "tsparticles";
 import {Engine} from 'tsparticles-engine';
+import Tilt from 'react-parallax-tilt';
+import {Fade} from "react-awesome-reveal";
 
 
 export const Home = () => {
@@ -44,24 +46,29 @@ export const Home = () => {
 
 
     return (
+
         <div className={s.home}>
             <Particles options={options} init={particlesInit} className={s.particles}/>
             <div className={s.home_color}>
             </div>
             <div className={s.wrapper}>
-                <div className={s.image}> </div>
+                <Tilt className={s.image} tiltMaxAngleX={2} tiltMaxAngleY={2}/>
                 <div className={s.text}>
-                    <div className={s.text__headers}>
-                        <h1 className={s.text__h1}>I'M GORELOVA POLINA.</h1>
-                        <span className={s.span}>FRONTEND DEVELOPER</span>
-                    </div>
-                    <div className={s.text__description}>I'm a Tunisian based web designer & front‑end developer focused
-                        on crafting clean &
-                        user‑friendly experiences, I am passionate about building excellent software that improves the
-                        lives of those around me.
-                    </div>
-                    <NavLink to={PATH.SKILLS}><Button text={"MORE ABOUT ME"} image={arrow}/></NavLink>
+                    <Fade direction='down'>
+                        <div className={s.text__headers}>
+                            <h1 className={s.text__h1}>I'M GORELOVA POLINA.</h1>
+                            <span className={s.span}>FRONTEND DEVELOPER</span>
+                        </div>
+                        <div className={s.text__description}>I'm a result oriented front-end developer with experience
+                            in
+                            creating SPA with React / Redux / TypeScript in team and independent. I am passionate about
+                            building excellent software that improves the
+                            lives of those around me.
+                        </div>
+                        <NavLink to={PATH.SKILLS}><Button text={"MORE ABOUT ME"} image={arrow}/></NavLink>
+                    </Fade>
                 </div>
+
             </div>
         </div>
     );
