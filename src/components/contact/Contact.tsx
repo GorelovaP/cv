@@ -1,6 +1,5 @@
 import React from 'react';
 import s from "./Contact.module.scss"
-import {Button} from "../../common/button/Button";
 import {Title} from "../../common/title/Title";
 import {ExtraInfoItem} from "./extraInfoItem/ExtraInfoItem";
 import PhoneMe from "../../sources/images/PhoneMe.png"
@@ -8,11 +7,9 @@ import MailMe from "../../sources/images/MailMe.png"
 import telegram from "../../sources/images/socialNetworks/telegram.png"
 import git from "../../sources/images/socialNetworks/github.png"
 import linked from "../../sources/images/socialNetworks/linkedin.png"
-import arrow from "../../sources/images/ArroyRight.png"
 import {SocialItem} from "./sotialItem/Socialltem";
-import {Input} from "../../common/input/Input";
-import {TextArea} from "../../common/textArea/TextArea";
-import { Slide } from 'react-awesome-reveal';
+import {Slide} from 'react-awesome-reveal';
+import {ContactForm} from "./contactForm/ContactForm";
 
 
 export const Contact = () => {
@@ -46,17 +43,7 @@ export const Contact = () => {
 
                             </div>
                             <div className={s.blockForm}>
-                                <form action="#" className={s.form}>
-                                    <Input type={"text"} className={s.input} placeholder={"Your name"}/>
-                                    <Input type={"email"} className={s.input} placeholder={"Your email"}/>
-                                    <Input type={"email"} className={s.input} placeholder={"Your subject"}/>
-
-                                    <TextArea className={s.textArea} placeholder={"Your message"}/>
-                                </form>
-                                <Button type={"submit"} text={"Send message"} image={arrow}/>
-                                <div className={s.outPutMessage}>
-
-                                </div>
+                                <ContactForm/>
                             </div>
                         </div>
                     </div>

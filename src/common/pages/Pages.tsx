@@ -18,9 +18,8 @@ export const PATH = {
 function Pages() {
 
     return (
-        <div>
+        <div >
             <Routes>
-                {/*в начале мы попадаем на страницу '/' и переходим сразу на страницу PATH.HOME*/}
                 <Route path={'/'} element={<Navigate to={PATH.HOME}/>}/>
 
                 <Route path={PATH.HOME} element={<Home/>}/>
@@ -28,8 +27,6 @@ function Pages() {
                 <Route path={PATH.PORTFOLIO} element={<Portfolio/>}/>
                 <Route path={PATH.CONTACTS} element={<Contact/>}/>
 
-
-                {/*он отрисуется если пользователь захочет попасть на несуществующую страницу*/}
                 <Route path={'/*'} element={<Error404Page/>}/>
             </Routes>
         </div>

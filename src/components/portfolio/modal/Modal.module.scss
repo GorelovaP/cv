@@ -101,8 +101,15 @@
         }
       }
 
+      &__technologies {
+        margin-bottom: 10px;
+      }
+
       &__link {
+        margin-bottom: 10px;
+
         &_yellow {
+          margin-left: 5px;
           color: $mainBrightColor;
         }
 

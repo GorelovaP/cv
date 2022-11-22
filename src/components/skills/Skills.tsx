@@ -36,7 +36,7 @@ export const Skills = () => {
                             <div className={s.PersonalBlock}>
                                 <div className={s.PersonalBlock__info}>
                                     <h3 className={s.PersonalBlock__info__h3}> Personal info</h3>
-                                    <div className={s.image}></div>
+                                    <div className={s.image}> </div>
                                     <ul className={s.PersonalBlock__info__items}>
                                         {
                                             Object.entries(infoItems).map(([key, value]) => <li key={key}
@@ -56,7 +56,7 @@ export const Skills = () => {
                                 </div>
                                 <div className={s.PersonalBlock__facts}>
                                     {facts.map((el, index) => {
-                                        return <Tilt>
+                                        return <Tilt key={index}>
                                             <div key={index} className={s.PersonalBlock__facts__box}>
                                                 <h3 className={s.box_h3}>{el[1]}</h3>
                                                 <p className={s.box_p}>

@@ -1,4 +1,9 @@
-import project from "../sources/images/project.png"
+import cards from "../sources/images/projects/cards.png"
+import invest from "../sources/images/projects/invest.png"
+import skychat from "../sources/images/projects/skychat.png"
+import portfolio from "../sources/images/projects/portfolio.png"
+import counter from "../sources/images/projects/counter.png"
+import todolist from "../sources/images/projects/todo.png"
 import react from "../sources/images/skills/react.png"
 import redux from "../sources/images/skills/redux.png"
 import js from "../sources/images/skills/javascript.svg"
@@ -21,45 +26,52 @@ export const InitialState: StateType = {
     portfolios: {
         all: [
             {
-                name: "TODO1",
-                description: "description loren  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cum dignissimos distinctio incidunt laborum modi nesciunt",
-                image: project,
-                technology: "dfgfdsasdfddddddddddddddddddddddddddddddddddddddddddddddddddghgfds",
-                link: "dfgxcvbnjmkljhgfdshj"
+                name: "Cards",
+                description: `This application is a learning cards application which allows users to create their own packs with cards or use others packs previously created by another users. While creating a new pack of cards you will be providing the question and the answer on it for every card. After that you just need to start learning process and every time you answer the question evaluate it according to the grades inside how good do you know the answer. Application has a special randomizer that analyze your grades to the question and will show you more often those of the questions that you mentioned as most difficult.`,
+                image: cards,
+                technology: "React, Redux, TypeScript, Formik, Yup, Material UI, Styled Components",
+                link: "https://cards-alpha-jade.vercel.app/",
+                git: "https://github.com/GorelovaP/Cards"
             },
             {
-                name: "hjkl222",
-                description: "description loren  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cum dignissimos distinctio incidunt laborum modi nesciunt",
-                image: project,
-                technology: "dfgfdsasdfddddddddddddddddddddddddddddddddddddddddddddddddddghgfds",
-                link: "dfgxcvbnjmkljhgfdshj"
+                name: "TODO List",
+                description: "",
+                image: todolist,
+                technology: "",
+                link: "https://gorelovap.github.io/ToDo",
+                git: "https://github.com/GorelovaP/ToDo"
             },
             {
-                name: "hjkl333",
-                description: "description loren  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cum dignissimos distinctio incidunt laborum modi nesciunt",
-                image: project,
-                technology: "dfgfdsasdfddddddddddddddddddddddddddddddddddddddddddddddddddghgfds",
-                link: "dfgxcvbnjmkljhgfdshj"
+                name: "Social Network SKYCHAT",
+                description: "description loren  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cum dignissimos distinctio incidunt laborum modi nesciunt This application is a social network for developers. This educational project has been implemented by using modern and outdated technologies (for example, class components). This approach has been chosen to gain a deeper understanding, how component lifecycle methods work, and their differences with the use of hooks in functional components. This knowledge will help in rewriting old projects.",
+                image: skychat,
+                technology: "React, Redux, Hooks, Class and Functional components, TypeScript, Formik, REST API, Redux-contactForm, Module css",
+                link: "https://gorelovap.github.io/SocialNetworkTS",
+                git: "https://github.com/GorelovaP/SocialNetworkTS"
             },
             {
-                name: "hjkl444",
-                description: "description loren  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cum dignissimos distinctio incidunt laborum modi nesciunt",
-                image: project,
-                technology: "dfgfdsasdfddddddddddddddddddddddddddddddddddddddddddddddddddghgfds",
-                link: "dfgxcvbnjmkljhgfdshj"
-            }, {
-                name: "hjkl555",
-                description: "description loren  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cum dignissimos distinctio incidunt laborum modi nesciunt",
-                image: project,
-                technology: "dfgfdsasdfddddddddddddddddddddddddddddddddddddddddddddddddddghgfds",
-                link: "dfgxcvbnjmkljhgfdshj"
+                name: "Portfolio",
+                description: "",
+                image: portfolio,
+                technology: "",
+                link: "https://gorelovap.github.io/cv",
+                git: "https://github.com/GorelovaP/cv"
             },
             {
-                name: "hjkl666",
-                description: "description loren  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cum dignissimos distinctio incidunt laborum modi nesciunt",
-                image: project,
-                technology: "dfgfdsasdfddddddddddddddddddddddddddddddddddddddddddddddddddghgfds",
-                link: "dfgxcvbnjmkljhgfdshj"
+                name: "Business card website RVM-INVEST",
+                description: "This application is a business card website for the commercial organization, that was created by my own design. On the website, a user can get acquainted with the history of the company, learn about products and production technologies. He can also find the supplier's contacts or leave his own in the feedback contactForm. The site saves information from the feedback contactForm in a Google sheet for further analysis by the company manager (it was the customer's wish)",
+                image: invest,
+                technology: "React,TypeScript, Module CSS, React-hook-contactForm, Yup, React-player",
+                link: "https://gorelovap.github.io/RVM_Invest/",
+                git: "https://github.com/GorelovaP/RVM_Invest"
+            },
+            {
+                name: "Counter",
+                description: "Counter app is a universal tool for counting anything you want. You can also set restrictions that will be saved in LocalStorage. In the application, you can't count in a negative value.",
+                image: counter,
+                technology: "React, Redux, TypeScript, Module CSS",
+                link: "https://gorelovap.github.io/Counter",
+                git: "https://github.com/GorelovaP/Counter"
             }],
         modalStatus: false,
         modal: {
@@ -109,7 +121,7 @@ export const InitialState: StateType = {
         ],
         experienceAndEducationBlock: {
             experience: [{
-                years: "Oct. 2022 - November",
+                years: "Oct. 2022 - Nov. 2022",
                 title: "Internship in IT-Incubator",
                 addition: "Front-end developer",
                 description: `Teamwork on the project "Cards". SPA application development, bug fixing, working with server, refactoring, deploying.`
@@ -186,6 +198,7 @@ export type portfolioType = {
     image: string
     technology: string
     link: string,
+    git?: string,
 }
 
 export type infoItemsType = {

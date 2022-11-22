@@ -3,35 +3,39 @@
 
 
 .supportBg {
-  @include supportBGScreen()
-}
+  @include supportBGScreen();
 
-.portfolio {
-  background: #111;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+  .animation {
 
-  .bodyWrapper {
-    @include bodyWrapper();
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 250px);
-    column-gap: 20px;
-
-    @media (max-width: 768px) {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 250px);
-    }
-    @media (max-width: 576px) {
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(6, 250px);
-      padding: 80px 15px 20px 15px;
-    }
   }
 
-}
+  .portfolio {
+    background: #111;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 
+    .bodyWrapper {
+      @include bodyWrapper();
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 250px);
+      column-gap: 20px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 250px);
+      }
+      @media (max-width: 576px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 250px);
+        padding: 80px 15px 20px 15px;
+        width: 100%;
+      }
+    }
+
+  }
+}

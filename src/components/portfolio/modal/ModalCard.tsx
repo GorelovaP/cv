@@ -19,24 +19,39 @@ export const ModalCard = (props: propsType) => {
     }
 
     return (<div onClick={(e) => CloseModal(e)} className={s.modalBg}>
-        <div className={s.close} onClick={props.close}> </div>
-        <div className={s.modal}>
-            <h3 className={s.modal__h3}>{props.data.name}</h3>
-            <div className={s.modal__textBlock}>
-                <div className={s.modal__textBlock__description}>
-                    <img alt={"description"} src={description}/>
-                    <span className={s.modal__textBlock__description_bold}>
+            <div className={s.close} onClick={props.close}> </div>
+            <div className={s.modal}>
+                <h3 className={s.modal__h3}>{props.data.name}</h3>
+                <div className={s.modal__textBlock}>
+                    <div className={s.modal__textBlock__description}>
+                        <img alt={"description"} src={description}/>
+                        <span className={s.modal__textBlock__description_bold}>
                     Description:</span> {props.data.description}
+                    </div>
+                    <div className={s.modal__textBlock__link}>
+                        <img alt={"link"} src={link}/>
+                        <span className={s.modal__textBlock__link_bold}>Link:</span>
+                        <a href={props.data.link}
+                           className={s.modal__textBlock__link_yellow}>
+                            {props.data.link}
+                        </a>
+                    </div>
+                    <div className={s.modal__textBlock__technologies}>
+                        <img alt={"Technologies"} src={description}/>
+                        <span className={s.modal__textBlock__description_bold}>
+                    Technologies:</span> {props.data.technology}
+                    </div>
+                    <div className={s.modal__textBlock__link}>
+                        <img alt={"link"} src={link}/>
+                        <span className={s.modal__textBlock__link_bold}>Git:</span>
+                        <a href={props.data.git}
+                           className={s.modal__textBlock__link_yellow}>
+                            {props.data.git}
+                        </a>
+                    </div>
                 </div>
-                <div className={s.modal__textBlock__link}>
-                    <img alt={"link"} src={link}/>
-                    <span className={s.modal__textBlock__link_bold}>Link:</span> <span
-                    className={s.modal__textBlock__link_yellow}>
-                    {props.data.link}
-                </span>
-                </div>
+                <img className={s.modal__image} src={props.data.image} alt={"ProjectImage"}/>
             </div>
-            <img className={s.modal__image} src={props.data.image} alt={"ProjectImage"}/>
         </div>
-    </div>)
+    )
 }

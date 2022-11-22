@@ -1,0 +1,98 @@
+@import "../../../common/style/variables";
+@import "../../../common/style/mixins";
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #252525 inset !important;
+
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  @media (max-width: 1200px) {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .inputWithError, .textAreaWithError {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+
+    .errorText {
+      color: red;
+      margin-left: 2px;
+    }
+  }
+
+  .inputWithError {
+    max-width: 33%;
+  }
+
+  .textAreaWithError {
+    width: 100%;
+  }
+
+  .input, .textArea {
+    background-color: #252525;
+    color: #fff;
+    border: 1px solid $bgColor;
+    border-radius: 30px;
+    padding: 11px 26px;
+    margin-bottom: 5px;
+    outline: none;
+
+
+    &:focus {
+      border: 1px solid $mainBrightColor;
+    }
+
+    &::placeholder {
+      @include text($supportFontFamily, 300, 15px, $textMainColor);
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 1200px) {
+      max-width: 100%;
+    }
+    @media (max-width: 576px) {
+      margin-bottom: 20px;
+    }
+
+    &_error {
+      border: 1px solid red;
+
+    }
+  }
+
+  .textArea {
+    box-sizing: border-box;
+    width: 100%;
+    resize: vertical;
+    min-height: 180px;
+    margin-bottom: 0;
+  }
+
+  .outPutMessage {
+    color: white;
+    margin-top: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 20px;
+    height: 20px;
+  }
+}
+

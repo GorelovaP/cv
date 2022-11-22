@@ -9,6 +9,7 @@
 }
 
 @mixin supportBGScreen() {
+  position: relative;
   background: $supportBgColor;
   width: 100%;
   min-height: 100vh;
