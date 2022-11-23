@@ -15,11 +15,13 @@ import {useDispatch, useSelector} from "react-redux";
 import {AppRootStateType} from "../../redux/store";
 import {ContactModal} from "./contactModal/ContactModal";
 import {SetIsSendMessageAC} from "../../redux/AppReduser";
+import {Error} from "../../common/error/Error";
 
 
 export const Contact = () => {
     const isLoading = useSelector<AppRootStateType, boolean>(state => state.app.loading)
     const isSendForm = useSelector<AppRootStateType, boolean>(state => state.app.contact.isSendForm)
+    const appError = useSelector<AppRootStateType, string>(state => state.app.appError)
     let dispatch = useDispatch()
 
     const CloseOnClickHandler = () => {
@@ -29,6 +31,7 @@ export const Contact = () => {
     return (
         <div className={s.supportBg}>
             {isSendForm && <ContactModal close={CloseOnClickHandler}/>}
+            { appError && <Error/>}
             <Slide direction="down">
                 <div className={s.contact}>
                     {isLoading && <Stack sx={{width: '100%', color: 'grey.500'}}><LinearProgress

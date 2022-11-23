@@ -23,11 +23,13 @@ import jquery from "../sources/images/skills/jquery.svg"
 import {AppThunkType} from "./store";
 import {appAPI, dataMessageType} from "../api/appApi";
 
+
 export type ActionsAppType =
     ReturnType<typeof ModalStatusAC>
     | ReturnType<typeof SetModalInformationAC>
     | ReturnType<typeof SetIsSendMessageAC>
     | ReturnType<typeof SetLoadingAC>
+    | ReturnType<typeof SetAppErrorAC>
 
 export const InitialState: StateType = {
     portfolios: {
@@ -150,7 +152,8 @@ export const InitialState: StateType = {
     contact: {
         isSendForm: false
     },
-    loading: false
+    loading: false,
+    appError:""
 }
 
 
@@ -164,6 +167,8 @@ export const AppReducer = (state: StateType = InitialState, action: ActionsAppTy
             return {...state, contact: {...state.contact, isSendForm: action.isSend}}
         case 'APP/SET-LOADING':
             return {...state, loading: action.isLoading}
+        case 'APP/SET-ERROR':
+            return {...state, appError: action.error}
         default:
             return state
     }
@@ -182,6 +187,9 @@ export const SetIsSendMessageAC = (isSend: boolean) => {
 export const SetLoadingAC = (isLoading: boolean) => {
     return {type: "APP/SET-LOADING", isLoading} as const
 }
+export const SetAppErrorAC = (error: string) => {
+    return {type: "APP/SET-ERROR", error} as const
+}
 
 
 export const sendMessageTC = (date: dataMessageType): AppThunkType => async dispatch => {
@@ -190,7 +198,8 @@ export const sendMessageTC = (date: dataMessageType): AppThunkType => async disp
         const res = await appAPI.sendMessage(date)
         dispatch(SetIsSendMessageAC(true))
     } catch (err) {
-        alert("Something get Wrong!!")
+        debugger
+        dispatch(SetAppErrorAC("something went wrong"))
     } finally {
         dispatch(SetLoadingAC(false))
     }
@@ -201,7 +210,8 @@ type StateType = {
     portfolios: portfoliosBlockType;
     skills: skillsBlockType;
     contact: contactBlockType;
-    loading: boolean
+    loading: boolean,
+    appError:string,
 }
 type skillsBlockType = {
     personalBlock: personalBlockType;
