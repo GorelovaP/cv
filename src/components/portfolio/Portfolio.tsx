@@ -6,7 +6,7 @@ import {Title} from "../../common/title/Title";
 import {useDispatch, useSelector} from "react-redux";
 import {ModalStatusAC, portfolioType, SetModalInformationAC} from "../../redux/AppReduser";
 import {AppRootStateType} from "../../redux/store";
-import {ModalCard} from "./modal/ModalCard";
+import {PortfolioModal} from "./portfolioModal/PortfolioModal";
 import {Slide} from 'react-awesome-reveal';
 
 
@@ -25,7 +25,7 @@ export const Portfolio = () => {
     }
 
     return (<>
-            {active && <ModalCard data={modal} close={CloseOnClickHandler}/>}
+            {active && <PortfolioModal data={modal} close={CloseOnClickHandler}/>}
             <div className={s.supportBg}>
                 <Slide className={s.animation} direction="down">
                     <div className={s.portfolio}>

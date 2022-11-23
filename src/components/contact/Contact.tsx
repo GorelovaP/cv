@@ -10,13 +10,29 @@ import linked from "../../sources/images/socialNetworks/linkedin.png"
 import {SocialItem} from "./sotialItem/Socialltem";
 import {Slide} from 'react-awesome-reveal';
 import {ContactForm} from "./contactForm/ContactForm";
+import {LinearProgress, Stack} from "@mui/material";
+import {useDispatch, useSelector} from "react-redux";
+import {AppRootStateType} from "../../redux/store";
+import {ContactModal} from "./contactModal/ContactModal";
+import {SetIsSendMessageAC} from "../../redux/AppReduser";
 
 
 export const Contact = () => {
+    const isLoading = useSelector<AppRootStateType, boolean>(state => state.app.loading)
+    const isSendForm = useSelector<AppRootStateType, boolean>(state => state.app.contact.isSendForm)
+    let dispatch = useDispatch()
+
+    const CloseOnClickHandler = () => {
+        dispatch(SetIsSendMessageAC(false))
+    }
+
     return (
         <div className={s.supportBg}>
+            {isSendForm && <ContactModal close={CloseOnClickHandler}/>}
             <Slide direction="down">
                 <div className={s.contact}>
+                    {isLoading && <Stack sx={{width: '100%', color: 'grey.500'}}><LinearProgress
+                        color={"inherit"}/></Stack>}
                     <Title bgTitle={"contact"} mainTitle={"Get in "} spanText={"touch"} extraClass={s.contactTitle}/>
                     <div className={s.bodyWrapper}>
                         <div className={s.content}>

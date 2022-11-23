@@ -3,14 +3,19 @@ import * as Yup from 'yup'
 import s from "./contactForm.module.scss";
 import {Button} from "../../../common/button/Button";
 import arrow from "../../../sources/images/ArroyRight.png";
-import React from "react";
-import {useDispatch} from "react-redux";
-import {AppDispatch} from "../../../redux/store";
+import React, {useEffect} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {AppDispatch, AppRootStateType} from "../../../redux/store";
 import {sendMessageTC} from "../../../redux/AppReduser";
 
 
 export const ContactForm = () => {
     const dispatch = useDispatch<AppDispatch>()
+    const isMessageSend = useSelector<AppRootStateType, boolean>(state => state.app.contact.isSendForm)
+
+    useEffect(() => {
+        isMessageSend && formik.resetForm();
+    }, [isMessageSend])
 
     const formik = useFormik({
         validationSchema: Yup.object({
@@ -26,7 +31,6 @@ export const ContactForm = () => {
             message: "",
         },
         onSubmit: values => {
-            formik.resetForm();
             dispatch(sendMessageTC(values))
         },
     })
@@ -55,7 +59,6 @@ export const ContactForm = () => {
             {formik.errors.message && formik.touched.message ?
                 <div className={s.errorText}>{formik.errors.message}</div> : null}
         </div>
-
         <Button type="submit" text="Send message" image={arrow} onClick={formik.handleSubmit}/>
     </form>
 }

@@ -1,0 +1,22 @@
+@import "./src/common/style/mixins";
+@import "./src/common/style/variables";
+
+.modal__h3 {
+  @include titleH3(20px);
+  @include text($mainFontFamily, 700, 33px, $mainBrightColor);
+  text-align: center;
+  @media (max-width: 768px) {
+    box-sizing: border-box;
+    margin-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.modal__text {
+  @include text($supportFontFamily, 500, 18px, $textMainColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

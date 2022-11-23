@@ -23,7 +23,12 @@ import jquery from "../sources/images/skills/jquery.svg"
 import {AppThunkType} from "./store";
 import {appAPI, dataMessageType} from "../api/appApi";
 
-export type ActionsAppType = ReturnType<typeof ModalStatusAC> | ReturnType<typeof SetModalInformationAC>
+export type ActionsAppType =
+    ReturnType<typeof ModalStatusAC>
+    | ReturnType<typeof SetModalInformationAC>
+    | ReturnType<typeof SetIsSendMessageAC>
+    | ReturnType<typeof SetLoadingAC>
+
 export const InitialState: StateType = {
     portfolios: {
         all: [
@@ -141,7 +146,11 @@ export const InitialState: StateType = {
             },
             ]
         }
-    }
+    },
+    contact: {
+        isSendForm: false
+    },
+    loading: false
 }
 
 
@@ -151,6 +160,10 @@ export const AppReducer = (state: StateType = InitialState, action: ActionsAppTy
             return {...state, portfolios: {...state.portfolios, modalStatus: action.status}}
         case 'PORTFOLIO/SET-MODAL-INFO':
             return {...state, portfolios: {...state.portfolios, modal: {...action.information}}}
+        case 'CONTACT/SET-ISSEND-MESSAGE':
+            return {...state, contact: {...state.contact, isSendForm: action.isSend}}
+        case 'APP/SET-LOADING':
+            return {...state, loading: action.isLoading}
         default:
             return state
     }
@@ -163,15 +176,23 @@ export const ModalStatusAC = (status: boolean) => {
 export const SetModalInformationAC = (information: portfolioType) => {
     return {type: "PORTFOLIO/SET-MODAL-INFO", information} as const
 }
+export const SetIsSendMessageAC = (isSend: boolean) => {
+    return {type: "CONTACT/SET-ISSEND-MESSAGE", isSend} as const
+}
+export const SetLoadingAC = (isLoading: boolean) => {
+    return {type: "APP/SET-LOADING", isLoading} as const
+}
 
 
 export const sendMessageTC = (date: dataMessageType): AppThunkType => async dispatch => {
     try {
+        dispatch(SetLoadingAC(true))
         const res = await appAPI.sendMessage(date)
-
-        alert("СЕНД!!")
+        dispatch(SetIsSendMessageAC(true))
     } catch (err) {
-
+        alert("Something get Wrong!!")
+    } finally {
+        dispatch(SetLoadingAC(false))
     }
 }
 
@@ -179,6 +200,8 @@ export const sendMessageTC = (date: dataMessageType): AppThunkType => async disp
 type StateType = {
     portfolios: portfoliosBlockType;
     skills: skillsBlockType;
+    contact: contactBlockType;
+    loading: boolean
 }
 type skillsBlockType = {
     personalBlock: personalBlockType;
@@ -190,7 +213,9 @@ type portfoliosBlockType = {
     modalStatus: boolean,
     modal: portfolioType
 }
-
+type contactBlockType = {
+    isSendForm: boolean
+}
 
 type personalBlockType = {
     infoItems: infoItemsType;
