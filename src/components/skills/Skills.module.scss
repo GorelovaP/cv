@@ -141,6 +141,17 @@
         font-size: 14px;
       }
 
+      .PersonalBlock__facts__box.plus {
+        .box_h3 {
+          &::after {
+            content: '+';
+            position: absolute;
+            font-size: 33px;
+            font-weight: 500;
+            top: 25px;
+          }
+        }
+      }
 
       .PersonalBlock__facts__box {
         position: relative;
@@ -169,14 +180,6 @@
           font-size: 50px;
           font-weight: 700;
           line-height: 1;
-
-          &::after {
-            content: '+';
-            position: absolute;
-            font-size: 33px;
-            font-weight: 500;
-            top: 25px;
-          }
         }
 
         .box_p {

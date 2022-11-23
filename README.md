@@ -10,21 +10,27 @@ My Portfolio
 
 ## About The Project:
 
+Portfolio website is a collection of my completed works, projects and other documents that demonstrate my
+professionalism and experience. Here you can download my cv, get acquainted with the projects in detail and find my
+contacts. The site is fully adaptive for mobile and desktop devices.
+
+A  NodeJS server was implemented for sending messages using a minimalistic and flexible Express web framework.
+https://github.com/GorelovaP/gmail-smtp
 
 <hr/>
 
 ## Built With:
 
 - React
+- Redux
 - TypeScript
 - SCSS
-
-
-
-<hr/>
-
-## Usage:
-
+- Formik
+- Yup
+- React-awesome-reveal
+- React-tsparticles
+- React-parallax-tilt
+- NodeJS + Express
 
 <hr/>
 

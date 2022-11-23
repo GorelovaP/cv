@@ -59,6 +59,6 @@ export const ContactForm = () => {
             {formik.errors.message && formik.touched.message ?
                 <div className={s.errorText}>{formik.errors.message}</div> : null}
         </div>
-        <Button type="submit" text="Send message" image={arrow} onClick={formik.handleSubmit}/>
+        <Button type="submit" text="Send message" image={arrow}/>
     </form>
 }

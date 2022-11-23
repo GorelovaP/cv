@@ -42,9 +42,9 @@ export const InitialState: StateType = {
             },
             {
                 name: "TODO List",
-                description: "",
+                description: "Todoist is a popular task manager and to–do list application. In this application you can create and delete todo-lists, change their name, create, delete, modify and sort tasks in them. Registration is also implemented in the project.",
                 image: todolist,
-                technology: "",
+                technology: "React, Redux, TypeScript, Formik, Yup, Material UI, module CSS",
                 link: "https://gorelovap.github.io/ToDo",
                 git: "https://github.com/GorelovaP/ToDo"
             },
@@ -58,9 +58,9 @@ export const InitialState: StateType = {
             },
             {
                 name: "Portfolio",
-                description: "",
+                description: "Portfolio website is a collection of my completed works, projects and other documents that demonstrate my professionalism and experience. Here you can download my cv, get acquainted with the projects in detail and find my contacts. The site is fully adaptive for mobile and desktop devices. A  NodeJS server was implemented for sending messages using a minimalistic and flexible Express web framework.",
                 image: portfolio,
-                technology: "",
+                technology: "React, Redux, TypeScript, SCSS, Formik, Yup, React-awesome-reveal, React-tsparticles, React-parallax-tilt, NodeJS + Express",
                 link: "https://gorelovap.github.io/cv",
                 git: "https://github.com/GorelovaP/cv"
             },
@@ -104,8 +104,8 @@ export const InitialState: StateType = {
                 Russian: "Native",
             },
             facts: [
-                ["YEARS OF EXPERIENCE", "21"],
                 ["COMPLETED PROJECTS", "6"],
+                ["UNIVERSITY DEGREE IN PROGRAMMING ", ":)"],
             ]
         },
         skillsBlock: [
