@@ -20,6 +20,8 @@ import git from "../sources/images/skills/git.png"
 import figma from "../sources/images/skills/figma.png"
 import sql from "../sources/images/skills/sql-server.png"
 import jquery from "../sources/images/skills/jquery.svg"
+import {AppThunkType} from "./store";
+import {appAPI, dataMessageType} from "../api/appApi";
 
 export type ActionsAppType = ReturnType<typeof ModalStatusAC> | ReturnType<typeof SetModalInformationAC>
 export const InitialState: StateType = {
@@ -155,6 +157,25 @@ export const AppReducer = (state: StateType = InitialState, action: ActionsAppTy
 }
 
 
+export const ModalStatusAC = (status: boolean) => {
+    return {type: "PORTFOLIO/CHANGE-MODAL-STATUS", status} as const
+}
+export const SetModalInformationAC = (information: portfolioType) => {
+    return {type: "PORTFOLIO/SET-MODAL-INFO", information} as const
+}
+
+
+export const sendMessageTC = (date: dataMessageType): AppThunkType => async dispatch => {
+    try {
+        const res = await appAPI.sendMessage(date)
+
+        alert("СЕНД!!")
+    } catch (err) {
+
+    }
+}
+
+
 type StateType = {
     portfolios: portfoliosBlockType;
     skills: skillsBlockType;
@@ -217,10 +238,3 @@ export type infoItemsType = {
 export type factsType = string[]
 
 
-export const ModalStatusAC = (status: boolean) => {
-    return {type: "PORTFOLIO/CHANGE-MODAL-STATUS", status} as const
-
-}
-export const SetModalInformationAC = (information: portfolioType) => {
-    return {type: "PORTFOLIO/SET-MODAL-INFO", information} as const
-}

@@ -4,9 +4,13 @@ import s from "./contactForm.module.scss";
 import {Button} from "../../../common/button/Button";
 import arrow from "../../../sources/images/ArroyRight.png";
 import React from "react";
+import {useDispatch} from "react-redux";
+import {AppDispatch} from "../../../redux/store";
+import {sendMessageTC} from "../../../redux/AppReduser";
 
 
 export const ContactForm = () => {
+    const dispatch = useDispatch<AppDispatch>()
 
     const formik = useFormik({
         validationSchema: Yup.object({
@@ -22,7 +26,8 @@ export const ContactForm = () => {
             message: "",
         },
         onSubmit: values => {
-            console.log(values)
+            formik.resetForm();
+            dispatch(sendMessageTC(values))
         },
     })
     return <form className={s.form} onSubmit={formik.handleSubmit}>
@@ -45,12 +50,11 @@ export const ContactForm = () => {
         </div>
 
         <div className={s.textAreaWithError}>
-            <textarea className={`${s.textArea} ${formik.errors.subject ? s.textArea_error : null}`}
+            <textarea className={`${s.textArea} ${formik.errors.message ? s.textArea_error : null}`}
                       placeholder={"Your message"} {...formik.getFieldProps('message')}/>
             {formik.errors.message && formik.touched.message ?
                 <div className={s.errorText}>{formik.errors.message}</div> : null}
         </div>
-
 
         <Button type="submit" text="Send message" image={arrow} onClick={formik.handleSubmit}/>
     </form>
