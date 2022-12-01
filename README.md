@@ -16,7 +16,9 @@ contacts. The site is fully adaptive for mobile and desktop devices.
 
 A  NodeJS server was implemented for sending messages using a minimalistic and flexible Express web framework.
 https://github.com/GorelovaP/gmail-smtp
-F
+
+DEMO: https://gorelovap.github.io/cv
+
 <hr/>
 
 ## Built With:
