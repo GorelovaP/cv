@@ -36,7 +36,7 @@ export const Skills = () => {
                             <div className={s.PersonalBlock}>
                                 <div className={s.PersonalBlock__info}>
                                     <h3 className={s.PersonalBlock__info__h3}> Personal info</h3>
-                                    <div className={s.image}></div>
+                                    <div className={s.image}> </div>
                                     <ul className={s.PersonalBlock__info__items}>
                                         {
                                             Object.entries(infoItems).map(([key, value]) => <li key={key}
@@ -52,7 +52,7 @@ export const Skills = () => {
                                         <a href="https://www.codewars.com/users/GorelovaP"> <SocialItem
                                             image={codewars}/></a>
                                     </div>
-                                    <a href={"https://drive.google.com/file/d/1frzB7gZ1inxDhT426AHtZeFNjm3Qy6gK/view?usp=share_link"}
+                                    <a href={"https://drive.google.com/file/d/1OikKhb5lNAMsUiqGzioGj5HWD5fcy18M/view?usp=sharing"}
                                        download>
                                         <Button text={"Download CV"} image={download}/>
                                     </a>
