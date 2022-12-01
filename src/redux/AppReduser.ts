@@ -46,7 +46,7 @@ export const InitialState: StateType = {
                 name: "TODO List",
                 description: "Todoist is a popular task manager and to–do list application. In this application you can create and delete todo-lists, change their name, create, delete, modify and sort tasks in them. Registration is also implemented in the project.",
                 image: todolist,
-                technology: "React, Redux, TypeScript, Formik, Yup, Material UI, module CSS",
+                technology: "React, Redux Toolkit, TypeScript, Formik, Yup, Material UI, Storybook, Unit tests",
                 link: "https://gorelovap.github.io/ToDo",
                 git: "https://github.com/GorelovaP/ToDo"
             },
@@ -153,7 +153,7 @@ export const InitialState: StateType = {
         isSendForm: false
     },
     loading: false,
-    appError:""
+    appError: ""
 }
 
 
@@ -195,7 +195,7 @@ export const SetAppErrorAC = (error: string) => {
 export const sendMessageTC = (date: dataMessageType): AppThunkType => async dispatch => {
     try {
         dispatch(SetLoadingAC(true))
-        const res = await appAPI.sendMessage(date)
+        await appAPI.sendMessage(date)
         dispatch(SetIsSendMessageAC(true))
     } catch (err) {
         debugger
@@ -211,7 +211,7 @@ type StateType = {
     skills: skillsBlockType;
     contact: contactBlockType;
     loading: boolean,
-    appError:string,
+    appError: string,
 }
 type skillsBlockType = {
     personalBlock: personalBlockType;
