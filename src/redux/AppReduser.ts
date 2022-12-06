@@ -52,7 +52,7 @@ export const InitialState: StateType = {
             },
             {
                 name: "Social Network SKYCHAT",
-                description: "description loren  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cum dignissimos distinctio incidunt laborum modi nesciunt This application is a social network for developers. This educational project has been implemented by using modern and outdated technologies (for example, class components). This approach has been chosen to gain a deeper understanding, how component lifecycle methods work, and their differences with the use of hooks in functional components. This knowledge will help in rewriting old projects.",
+                description: "This application is a social network for developers. This educational project has been implemented by using modern and outdated technologies (for example, class components). This approach has been chosen to gain a deeper understanding, how component lifecycle methods work, and their differences with the use of hooks in functional components. This knowledge will help in rewriting old projects.",
                 image: skychat,
                 technology: "React, Redux, Hooks, Class and Functional components, TypeScript, Formik, REST API, Redux-contactForm, Module css",
                 link: "https://gorelovap.github.io/SocialNetworkTS",

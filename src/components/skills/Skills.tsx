@@ -52,7 +52,7 @@ export const Skills = () => {
                                         <a href="https://www.codewars.com/users/GorelovaP"> <SocialItem
                                             image={codewars}/></a>
                                     </div>
-                                    <a href={"https://drive.google.com/file/d/1OikKhb5lNAMsUiqGzioGj5HWD5fcy18M/view?usp=sharing"}
+                                    <a href={"https://drive.google.com/file/d/1GjeybucLSkhs6tBF7CrSH1BC8K5XngKM/view?usp=share_link"}
                                        download>
                                         <Button text={"Download CV"} image={download}/>
                                     </a>
